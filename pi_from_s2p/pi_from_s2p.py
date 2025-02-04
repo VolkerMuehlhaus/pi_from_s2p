@@ -99,8 +99,8 @@ print(f"Series L  [nH] : {Lseries_ftarget*1e9:.3f}")
 print(f"Series R  [Ohm]: {Rseries_ftarget:.3f}") 
 print(f"Shunt C @ port 1 [fF] : {Cshunt1_ftarget*1e15:.3f}")  
 print(f"Shunt R @ port 1 [Ohm]: {Rshunt1_ftarget:.3f}")  
-print(f"Shunt C @ port 2 [fF] : {Cshunt1_ftarget*1e15:.3f}")  
-print(f"Shunt R @ port 2 [Ohm]: {Rshunt1_ftarget:.3f}")  
+print(f"Shunt C @ port 2 [fF] : {Cshunt2_ftarget*1e15:.3f}")  
+print(f"Shunt R @ port 2 [Ohm]: {Rshunt2_ftarget:.3f}")  
 print('')
 
 
