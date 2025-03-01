@@ -3,7 +3,7 @@
 pi_from_s2p reads S-parameter data (*.s2p) for an RFIC inductor 
 and calculates component values for simple narrowband pi model. 
 
-![plot](./doc/L1n0_model_extracted20G.png)
+![plot](./doc/model.png)
 
 # Theory of operation:
 The S-parameters at one user defined frequency are extracted 
