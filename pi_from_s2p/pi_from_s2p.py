@@ -23,11 +23,19 @@ f_target = args.f_ghz*1e9
 
 
 # frequency class, see https://github.com/scikit-rf/scikit-rf/blob/master/skrf/frequency.py
-freq = sub.frequency
-print('S2P frequency range is ',freq.start/1e9, ' to ', freq.stop/1e9, ' GHz')
+print('S2P frequency range is ',sub.frequency.start/1e9, ' to ', sub.frequency.stop/1e9, ' GHz')
 print('Extraction frequency: ', args.f_ghz, ' GHz')
-assert f_target < freq.stop
+assert f_target < sub.frequency.stop
 
+# if the input data has DC point, remove that because it will throw warnungs later
+if sub.frequency.start == 0:
+    # resample to start at 1 GHz (or closest value)
+    newrange = '1-' + str(sub.frequency.stop/1e9) + 'ghz'
+    sub = sub[newrange]
+
+
+
+freq = sub.frequency
 f = freq.f
 
 z11=sub.z[0::,0,0]
